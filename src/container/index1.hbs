@@ -1,0 +1,107 @@
+{{!-- 
+Це код container файлу для index сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+ --}}
+
+<style>
+    h3 {color:yellow}  /* має ДРУГИЙ ПРІОРИТЕТ*/
+</style>
+
+ <div class=" p-5 box" id="box">
+    <h1 id="user">USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1> 
+    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1> 
+    <h2 style="color: green">USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h2> 
+    <h2>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h2> /* має ТРЕТІЙ ПРІОРИТЕТ */
+    <h3>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h3>
+
+    <button type="button" class="button"{{!-- class="btn btn-primary" --}}>Купити</button>
+    <p>TEXT</p>
+
+</div> 
+
+ <footer class="p-5 box">
+     <h1>USB хаб Type </h1> 
+
+     <p class="user user2"> THIS IS </p>
+    <p>
+        <em>FDF</em> {{!-- FOOTER>P>EM - так не працює дочірній,а працює НАЩАДОК селектор --}}
+    </p>
+
+    <div>
+        <div>
+            <em class="child"> Probne</em>
+            <p class="child"> Probne</p>
+        </div>
+    </div>
+
+    <div class="child">PROBNE</div>
+</footer>
+
+ <section>
+    <h1>USB </h1> 
+    <p class="user user2"> THIS </p>
+</section>
+
+<section>
+    <h1>USB </h1> 
+    <em>ROOT</em>
+    <div>
+        <p class="user user2"> THIS </p>
+    </div>
+</section>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
+
+<div class="p-5 m-5 card-dark">
+    <ul>
+        <div class="item">first</div>
+        <div class="item">first</div>
+        <div class="item">first</div>
+        <li class="item item-first">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+    </ul>
+</div>
+
+<div class="p-5 m-5 card-dark">
+    <ul>
+        <div class="item">first</div>
+        <div class="item">first</div>
+        <div class="item">first</div>
+        <b class="item item-first">1</b>
+        <p class="item">2</p>
+        <strong class="item">St</strong>
+        <p class="item">3</p>
+        <p>Not</p>
+        <p></p>
+        <b class="item">4</b>
+    </ul>
+</div>
+
+<div class="card p-5 m-5 card-dark">
+    <input class="input-dark" required>
+    <input class="input-dark" type="number">
+</div>  
+
+ <div class="card p-5 m-5 card-dark">
+    <img alt="image small card 100px" class="small-img" src="https://picsum.photos/200/300" height="100px">
+    <img alt="image smallcard 100px" class="small-img" src="https://picsum.photos/200/300" height="100px"> - {{!-- не працює smallcard .small-img[alt~='small'] --}}
+    <button class="btn">click</button>
+    <br>
+    <a class="small btn-secondary" href="https://picsum.photos/200/300">click</button> {{!-- не працює [class^='btn'] --}}
+    <a class="btn btn-secondary" href="https://picsum.photos/200/300">click</a>
+    <br>
+    <a class="btn btn-secondary tobig" href="https://picsum.photos/200/300">click</a>  {{!-- a[class*='btn'] --}}
+    <br>
+    <a class="small btn btn-secondary big" href="https://picsum.photos/200/300">click</a>  
+</div>
+<br> 
+
+<div class="card p-5 m-5 card-dark">
+    <p class="big-text">there are</p>
+    <input class="input-dark" placeholder="this text" required>
+</div>
