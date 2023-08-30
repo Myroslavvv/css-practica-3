@@ -1,295 +1,47 @@
-:root {
-  background: rgb(254, 254, 254);
+.card {
+  color: red;
 }
 
-html {
-  max-width: 720px;
-
-  background: rgb(24, 51, 227);
-}
-
-body {
-  background: #fff;
-}
-
-/* * {
-  color:red
+/* p {
+  background: #d2ff0a;
 } */
 
-h2 {
-  color: pink;  /* має ПЕРШИЙ ПРІОРИТЕТ */
-}
-
-.box {
-  background-color: rgb(210, 168, 17);
-}
-
-#user {
-  color: rgb(254, 252, 255);
-}
-
-h1, h2#user, button {
-  color: red;
-}
-
-h1.button {
- background:violet;
-}
-
-div > p {
-  color: aqua;
-}
-
-.box > p {
-  color: rgb(6, 7, 7);
-
-}
-#box > p {
-  color: rgb(119, 7, 7);
-}
-
-.user, #user {
-  color: blue;
-}
-
-.user2 {
-  color: rgb(27, 90, 3);
-}
-
-footer > .user {
-  color: red;
-}
-
-footer em {
-  color:rgb(23, 17, 210)
-}
-
-footer em.child,
-footer div.child,
-footer .child {
+.card > p {
+  /* color: blueviolet; */
+  /* color: rgba(0, 35, 210, 0.5); */
+  /* color: hsla(92, 100%, 31%, 0.58); */
   color: green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
 }
 
-h1 + p,
-h1 + em {
-  background: rgb(0, 0, 0);
+p:focus,
+p:active,
+p:hover {
+  -webkit-text-fill-color: rgb(217, 255, 0);
+  -webkit-text-stroke: 1px rgb(255, 0, 230);
+
+  direction: rtl;
 }
 
-/* h1 ~ p,
-div > p { */
-  /* h1 ~ div > p { */
-    h1 ~ * > p {
-  background: rgb(222, 215, 222);
+#test {
+  color: none;
+  -webkit-text-fill-color: none;
+  -webkit-text-stroke: none;
+  
+  /* writing-mode: vertical-lr; */
+  text-align: justify;
+  letter-spacing: 0.1em;
+  
 }
 
-.card-dark {
-  background: white;
+span {
+  /* text-align: center; */
+  text-transform: uppercase;
+  text-decoration: underline dotted red;
 }
 
-.item {
-  color: green
+pre {
+  tab-size: 15px;
 }
 
-.item-first {
-  color: blue;
-}
-
-.item:last-child {
-  color: blue;
-}
-
-.item:only-child { /*якщо один <li> існує*/
-  color: blue;
-}
-
-.item:first-of-type {
-  color: blue;
-}
-
-.item:last-of-type {
-  color: rgb(255, 0, 0);
-}
-
-.item:only-of-type {
-  color: rgb(0, 234, 255);
-}
-
-.item:nth-child(4) {
-  color: rgb(14, 14, 14);
-}
-
-div:nth-child(1) {
-  color: rgb(14, 14, 14);
-}
-
-div:nth-child(even) {
-  color: rgb(15, 167, 33);
-}
-
-div:nth-child(odd) {
-  color: rgb(15, 167, 33);
-}
-
-.item:nth-last-child(1) {
-  color: rgb(15, 167, 33);
-}
-
-.item:nth-of-type(1) {
-  color: rgb(15, 167, 33);
-}
-
-.item:nth-last-of-type(1) {
-  color: rgb(15, 167, 33);
-}
-
-p:not(.item) {
-  color:rgb(24, 51, 227)
-}
-/* або*/
-.item:not(p) {
-  color:rgb(24, 51, 227)
-}
-
-p:empty {
-  height: 10px;
-  background: rgb(218, 39, 39);
-}
-
-.input-dark {
-  background: rgb(135, 230, 101);
-}
-
-.input-dark[required] {
-  background: rgb(150, 101, 230);
-}
-
-.input-dark[type='number'] {
-  background: rgb(226, 43, 43);
-}
-
-.small-img[alt~='small'] {
-  height: 200px;
-}
-
-button[class|="btn"] {
-  background: green;
-}
-
-a[class^='btn'] {
-  background: red;
-}
-
-a[class*='btn'] {
-  background: rgb(26, 255, 0);
-}
-
-a[class$='big'] {
-  background: rgb(0, 4, 255);
-}
-
-.btn::first-letter {
-  color: red;
-}
-
-.big-text::first-line {
-  color: rgb(212, 0, 0);
-}
-
-.input-dark::placeholder {
-  color: black;
-  background: rgb(217, 255, 0);
-}
-
-.big-text::before,
-.big-text::after {
-  content: '$$$'
-}
-
-
-
-#test:target{
-  color: red;
-}
-
-.link:link {
-  color: red;
-}
-
-.link:hover {
-  color: green;
-}
-.card:hover {
-  background: gray;
-}
-
-.link:active {
-  color: rgb(235, 255, 13);
-}
-
-.card:active {
-  background: rgb(235, 255, 13);
-}
-
-.input {
-  background-color: rgb(31, 222, 6);
-}
-input:focus {
-  background-color: red;
-}
-
-.card:focus-within {
-  background: rgb(40, 56, 152);
-}
-
-.card:lang(en) >span::after {
-  content: ' (en)';
-}
-
-button {
-  background-color: greenyellow;
-}
-button:enabled {
-  background-color: greenyellow;
-}
-button:disabled {
-  background-color: aqua;
-}
- .inp:read-write {
-  background-color: blueviolet;
-}
- .inp:read-only {
-  background-color: rgb(251, 251, 251);
-}
-
-input[type='checkbox']:checked ~ span {
-  background: red;
-}
-
-.valid:valid {
-  background: yellow;
-}
-.valid:invalid {
-  background: rgb(83, 2, 176);
-
-}
-.valid:optional {
-  background: rgb(255, 239, 19);
-}
-
-.number:focus {
-  background: rgba(179, 3, 3, 0.694);
-}
-.number:out-of-range {
-  background: red;
-}
-.number:in-range {
-  background: rgb(2, 222, 2);
-}
-
-.number:invalid {
-  background:blueviolet;
-}
-
-input:placeholder-shown ~ span {
-  background: pink;
-}
