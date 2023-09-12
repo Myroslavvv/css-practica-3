@@ -2,12 +2,12 @@
 
     <div class="page content">
 		<header class="page_block">
-			<header class="header row g-0">
-				<div class="col-3">
+			<header class="header">
+				<div class="">
 					{{> logo}}
 				</div>
 	
-				<nav class="header_nav col-9 ">
+				<nav class="header_nav">
 					{{!-- {{> nav list=header isVertical=true}} --}}
 					<div class="header_nav_right">
 						{{> nav list=header}}
@@ -26,11 +26,9 @@
 		</section>
 
 		<section class="page_block">
-			<div class="row g-4">
+			<div class="flex-container">
 				{{#each preview}}
-				<div class="col-6">
-					{{> cardPreview data=this}}
-				</div>
+					{{> cardPreview class="flex-item" data=this}}
 				{{/each}}
 			</div>
 		</section>
@@ -40,17 +38,15 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="list-header">
-							<div class="row g-0">
-								<div class="col-6">
-									<h2 class="list-title"> list</h2>
-								</div>
+							<div>
+								<h2 class="list-title"> list</h2>
+							</div>
 
-								<div class="col-6">
-									<div class="category-list">
-										{{#each categories}}
-											<button class="category-button">{{text}}</button>
-										{{/each}}
-									</div>
+							<div>
+								<div class="category-list">
+									{{#each categories}}
+										<button class="category-button">{{text}}</button>
+									{{/each}}
 								</div>
 							</div>
 						</div>
@@ -81,14 +77,14 @@
 
 		
 		<footer class="page_block">
-			<div class="row g-0 footer">
-				<div class="col-3">
+			<div class="footer">
+				<div>
 					{{> logo}}
 					<span class="footer_copyright">Copyright 2023-2024</span>
 				</div>
 
 				{{#each footer}}
-					<div class="col-3">
+					<div>
 						<span class="footer_title">{{title}}</span>
 						{{> nav list=links isVertical=true}}
 					</div>

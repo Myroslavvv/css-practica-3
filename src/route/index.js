@@ -206,7 +206,7 @@ layout: 'template-2',
       {
         date: "Oct 24",
         title: "Latest post",
-        text: "This is a wider card with supporting text below as a natural lead-in to additional content",
+        text: "This is a wider card with supporting text below as a natural lead-in to additional content/with supporting text below as a natural lead-in to additiona",
         category: [
           {
             id: 1,
