@@ -1,8 +1,8 @@
 
 	<header class="header">
-		<div class="">
+		<a href="#test">
 			{{> logo}}
-		</div>
+		</a>
 
 		<nav class="header_nav">
 			{{!-- {{> nav list=header isVertical=true}} --}}
@@ -12,15 +12,42 @@
 		</nav>
 	</header>
 
+
 	{{#with hero}}
 	<div class="hero">
 		<div class="hero-content">
 			<h1 class="hero-title">{{title}}</h1>
 			<p class="hero-text">{{text}}</p>
 		</div>
-		<img src="{{photo}}" alt="Hero image" class="hero-photo">
+		<div class="hero-slider">
+			<div class="hero-slider-icon hero-slider-left">{{left}}</div>
+			<img src="{{photo}}" alt="Hero image" class="hero-image">
+			<div class="hero-slider-icon hero-slider-right">{{right}}</div>
+		</div>
 	</div>
 	{{/with}}
+
+	<input type="text" class="input">
+
+	<div class="modal">
+		{{hero.text}}{{hero.text}}
+		{{!-- <img src="{{hero.photo}}" alt="Hero image" class="modal-image"> --}}
+		{{!-- <div>{{hero.text}}{{hero.text}}</div> --}}
+		<div class="modal-text">{{hero.text}}{{hero.text}}</div>
+		
+	</div>
+
+	<main class="blog">
+		{{#each blog}}
+			{{> cardblog data=this}}
+		{{/each}}
+	</main>
+
+	<main class="blog">
+		{{#each blog}}
+			{{> cardblog data=this}}
+		{{/each}}
+	</main>
 
 	<main class="blog">
 		{{#each blog}}
@@ -40,7 +67,7 @@
 		</div>
 	{{/with}}
 		
-	<footer class="footer">
+	<footer class="footer" id="test">
 		<div>
 			{{> logo}}
 			<span class="footer_copyright">Copyright 2023-2024</span>
