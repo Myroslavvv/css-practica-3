@@ -1,0 +1,12 @@
+{{#with footer}}
+	<div class="footer-nav">
+		<div class="footer-nav-link">
+			{{#each pages}}
+				<span class="footer-nav-url" href="{{path}}">{{name}}</span>
+			{{/each}}
+		</div>			
+		<div>
+			<span class="footer-nav-copyright">{{copyright}}</span>
+		</div>
+	</div>
+{{/with}}
